@@ -43,7 +43,7 @@ The notebook contains:
    * Saves trained model (```.keras```) and scaler (```.save```) for use in the Streamlit app.
   
 ## Streamlit App (```weather_app.py```)
-The app allows uses to **predict daily average temperature** interactively.
+The app allows users to **predict daily average temperature** interactively.
 **Features**:
 * Select a date (past or up to 7 days in the future).
 * Fetches weather data from **Open-Meteo**.
@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 ## Usage Workflow
 1. **Train the model (optional)**
-   * Open ```train_model.ipynb```
+   * Open ```weather-prediction.ipynb```
    * Run the notebook to train your own model and save it with the scaler.
 2. **Run this app**
    * Ensure the trained model and scaler are in the same folder.
@@ -85,6 +85,6 @@ pip install -r requirements.txt
 * Historical data is used for past dates; forecast data is used for today/future dates.
 * Cached API results expire after 1 hour.
 
-## Lisence
+## License
 This project is licensed under the MIT License.
 
