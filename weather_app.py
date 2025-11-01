@@ -116,11 +116,15 @@ with st.spinner("Fetching weather data..."):
         st.error(f"Could not fetch weather data: {e}")
         st.stop()
 
+# Convert fetched temperature to Fahrenheit
+tmin_f = tmin_c * 9/5 + 32
+tmax_f = tmax_c * 9/5 + 32
+
 # Display fetched weather info
 st.subheader("Weather Data Used for Prediction")
 st.write(f"**Date:** {selected_date.strftime('%B %d, %Y')}")
-st.write(f"**TMIN:** {tmin_c:.2f} °C")
-st.write(f"**TMAX:** {tmax_c:.2f} °C")
+st.write(f"**Minimum Temperature:** {tmin_f:.2f} °F ({tmin_c:.2f} °C)")
+st.write(f"**Maximum Temperature:** {tmax_f:.2f} °F ({tmax_c:.2f} °C)")
 st.write(f"**Precipitation:** {prcp:.2f} mm")
 st.write(f"**Wind Speed:** {awnd:.2f} m/s")
 
